@@ -1,4 +1,5 @@
 \version "2.16.0"  % necessary for upgrading to future LilyPond versions.
+#(set-global-staff-size 30)
 
 \paper  {
   #(define fonts
@@ -14,11 +15,13 @@
   top-margin = 1\in
   bottom-margin = 1\in
 
-  markup-system-spacing #'basic-distance = #20
+  markup-system-spacing #'basic-distance = #15
+  system-system-spacing #'padding = #8
 }
 
 \header{
   title = "下雨了"
+  tagline = ""
 }
 
 \score {
@@ -27,7 +30,8 @@
   a a8. b16 | c8 c b (a) | e'8. e16 e8 (f) | e4. r8 | \break
   e8. e16 f8 e8 | a8. a16 f8 e8 | d8 e16 (f16) e8 e | b4. r8 | \break
   e8. e16 c8 b8 | a8. a16 c8 c8 | b8 b16 b16 b8 c8 | a4. r8 |
-  }
+  \bar "|."
+}
 
 \addlyrics {
   下 雨 啦 | 下 雨 啦! | 下 个 没 | 完, |
